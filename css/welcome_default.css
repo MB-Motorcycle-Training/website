@@ -1,0 +1,27 @@
+a:link
+{
+        color: #00FFFF; text-decoration: underline;
+}
+a:visited
+{
+        color: #FFFF00; text-decoration: underline;
+}
+a:active
+{
+        color: #FFFFFF; text-decoration: none;
+}
+a:hover
+{
+        color: #FFFFFF; text-decoration: underline;
+}
+body
+{
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        color: #FFFFFF;
+   font-size: 10pt; font-style: normal; font-weight: 400}
+
+TD,TH
+{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+        color: #FFFFFF;
+font-size: 10pt; font-style: normal; font-weight: 400}
