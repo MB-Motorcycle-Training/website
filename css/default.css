@@ -1,0 +1,33 @@
+a:link
+{
+        color: #0033CC; text-decoration: underline;
+}
+a:visited
+{
+        color: #FF0066; text-decoration: underline;
+}
+a:active
+{
+        color: #3333FF; text-decoration: underline;
+}
+a:hover
+{
+        color: #0000FF; text-decoration: underline;
+}
+body
+{
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        color: #000066;
+   font-size: 10pt; font-style: normal; font-weight: 400}
+
+TD,TH
+{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+        color: #000066;
+font-size: 10pt; font-style: normal; font-weight: 400}
+#page-wrapper {
+	width: 1139px;
+	margin: 0 auto;
+}.redheading1 {
+	color: #F00;
+}
