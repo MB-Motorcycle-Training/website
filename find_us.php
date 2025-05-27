@@ -2,14 +2,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- #BeginEditable "doctitle" -->
-<title>Find Us - Motorbike Training in South Yorkshire - Motorcycle Training in Sheffield - Mike Barlow Motorcycle Training</title>
+<title>Find Us - Motorbike Training in South Yorkshire - Motorcycle Training in Sheffield - MB Motorcycle Training</title>
 <!-- #EndEditable --><!-- #BeginEditable "description" -->
 <meta name="description" content="motorcycle training in sheffield, motorcycle training south yorkshire, motorbike training sheffield, chesterfield, motorcycle training derbyshire">
 <!-- #EndEditable --><!-- #BeginEditable "keywords" -->
 <meta name="keywords" content="motorcycle training in sheffield, motorcycle training south yorkshire, motorbike training sheffield, chesterfield, motorcycle training derbyshire"/>
 <!-- #EndEditable -->
 <meta name="revisit-after" CONTENT="15 days">
-<meta NAME="author" CONTENT="PeakEasy Web Design working for for Mike Barlow Motorcycle Training in Sheffield. From CBT to Direct Access">
+<meta NAME="author" CONTENT="PeakEasy Web Design working for for MB Motorcycle Training in Sheffield. From CBT to Direct Access">
 <meta NAME="copyright" CONTENT="Copyright (c) 2013 PeakEasy Design, a division of eBooks-UK Ltd.">
 <!-- All in One SEO Editable Template Pack 1.01 02 by PeakEasy Web Design[www.PeakEasy.co.uk.] -->
 <!--	Designed and Hosted by Peakeasy Web Design 	-->
@@ -170,7 +170,7 @@ function MM_swapImage() { //v3.0
         <tr>
           <td width="270" valign="top">
             <h4>Our location is at:</h4>
-            <p><b>Mike Barlow Motorcycle Training<br>
+            <p><b>MB Motorcycle Training<br>
                 <a href="http://www.sheffieldscooters.com/" target="_blank">Sheffield Scooters</a><br>
               Beech Works<br>
               Stubley Hollow<br>
@@ -299,11 +299,11 @@ optimisation by <a href="http://www.peakeasy.co.uk/" target="_blank">PeakEasy</a
 a division of <a href="http://www.ebooks-uk.com/" target="_blank">eBooks-UK Ltd</a>.<br>
       </font><font size="1">&copy; <a href="http://www.ebooks-uk.com/" target="_blank">eBooks-UK Ltd</a> 1998-2022</font></td>
     <td></td>
-    <td colspan="3" valign="top"><p align="center" class="style1">Motorcycle Training in Sheffield - <strong>Mike Barlow Motorcycle Training</strong> - Motorbike Training South Yorkshire, Motorcycle Training Chesterfield, Motorcycle Training Derbyshire</p>
+    <td colspan="3" valign="top"><p align="center" class="style1">Motorcycle Training in Sheffield - <strong>MB Motorcycle Training</strong> - Motorbike Training South Yorkshire, Motorcycle Training Chesterfield, Motorcycle Training Derbyshire</p>
 <p align="center"><strong><b>(MOBILE): 07768 340340 &nbsp;&nbsp; </b><strong>TEL: </strong><b>01246 411777<br>
               <a href="mailto:mike@mbmotorcycletraining.co.uk">email</a>:
     mike@mbmotorcycletraining.co.uk </b><strong>- website: www.mbmotorcycletraining.co.uk</strong></strong><br>
-      <strong>Mike Barlow Motorcycle Training, Beech Works, Stubley Hollow, Wreakes Lane, Dronfield, S18 1PN</strong></p>
+      <strong>MB Motorcycle Training, Beech Works, Stubley Hollow, Wreakes Lane, Dronfield, S18 1PN</strong></p>
     <p align="center"><a href="index.html" target="_top">about us</a> - <a href="find_us.htm" target="_top">find
         us</a> - <a href="the_law.htm" target="_top">the law</a> - <a href="licence_options.htm" target="_top">licence
         options</a> - <a href="cbt.htm" target="_top">CBT course</a> - <a href="theory_test.htm" target="_top">theory
