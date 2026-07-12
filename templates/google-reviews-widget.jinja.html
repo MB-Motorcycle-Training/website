@@ -1,0 +1,31 @@
+{% set reviews_block = page_content.reviews_section %}
+
+<section id="reviews-section" aria-labelledby="reviews-heading">
+  <h2 id="reviews-heading" class="reviews-heading">
+    {{ reviews_block.heading }}
+  </h2>
+
+  <div class="pinterest-grid">
+    {% for review in reviews_block.reviews %}
+    <article class="review-card">
+      <div class="card-stars" aria-hidden="true">
+        {% for i in range(review.rating) %}&#9733;{% endfor %}
+      </div>
+      <blockquote>
+        <p>"{{ review.text }}"</p>
+      </blockquote>
+      <cite>&mdash; {{ review.author }}</cite>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="reviews-link-wrap">
+    <a
+      href="https://share.google/ueeUeZhdYHekl1Kom"
+      target="_blank"
+      rel="noopener"
+    >
+      &gt;&gt; See all our Google Reviews &lt;&lt;
+    </a>
+  </div>
+</section>

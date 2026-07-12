@@ -1,0 +1,52 @@
+{% set faq = page_content %}
+{% extends "base.jinja.html" %} {% block header_extra %} {% include
+"hero.jinja.html" %} {% endblock %} {% block content %}
+<section id="faq-section">
+  <div class="faq-wrap">
+    <h1>{{ faq.title }}</h1>
+    <p class="faq-intro">{{ faq.intro }}</p>
+
+    {% for category in faq.categories %}
+    <div class="faq-category">
+      <h2>{{ category.name }}</h2>
+      {% for item in category["items"] %}
+      <details class="faq-item">
+        <summary class="faq-question">{{ item.question }}</summary>
+        <div class="faq-answer">
+          <p>{{ item.answer }}</p>
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}
+
+{# Setup schema json #}
+{% set all_faq_items = [] %}
+{% for category in faq.categories %}
+  {% for item in category["items"] %}
+    {% set _ = all_faq_items.append(item) %}
+  {% endfor %}
+{% endfor %}
+
+{% block schema_json %}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in all_faq_items %}
+    {
+      "@type": "Question",
+      "name": {{ item.question | tojson }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.answer | tojson }}
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+{% endblock %}

@@ -1,0 +1,49 @@
+<nav id="menu-items" aria-label="Primary">
+  <div class="nav-bar-row">
+    <button
+      type="button"
+      class="nav-toggle"
+      id="nav-toggle"
+      aria-expanded="false"
+      aria-controls="nav-links"
+    >
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+
+    <div class="nav-cta-wrap">
+      <a href="tel:{{ base_data.phone_normalised }}" class="nav-call-btn">
+        <span class="call-label">Call Now</span>
+        <span class="call-number">{{ base_data.phone }}</span>
+      </a>
+    </div>
+  </div>
+
+  <ul id="nav-links">
+    <li><a href="index.html" class="nav-btn">Home</a></li>
+    <li><a href="courses.html" class="nav-btn">Courses</a></li>
+    <li><a href="faq.html" class="nav-btn">FAQ</a></li>
+    <li><a href="find_us.html" class="nav-btn">Find Us</a></li>
+  </ul>
+</nav>
+
+<script>
+  // Hamburger nav toggle
+  const navToggle = document.getElementById("nav-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  navToggle.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", isOpen);
+  });
+
+  // Close the menu after a link is picked (mobile only)
+  navLinks.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") {
+      navLinks.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+</script>

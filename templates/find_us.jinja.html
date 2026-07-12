@@ -1,0 +1,70 @@
+{% set find_us = page_content %}
+
+{% extends "base.jinja.html" %} {% block schema_json %} { "@context":
+"https://schema.org", "@type": "ContactPage", "name": "{{ find_us.title }}",
+"mainEntity": { "@type": "DrivingSchool", "name": "MB Motorcycle Training",
+"@id": "https://www.mikesmotorcycletraining.co.uk/#drivingschool", "image":
+"https://www.mikesmotorcycletraining.co.uk/images/og-share-card.jpg", "address":
+{ "@type": "PostalAddress", "streetAddress": "Adjacent to Beech Works, Stubley
+Hollow, Wreakes Lane", "addressLocality": "Dronfield", "postalCode": "S18 1PN",
+"addressCountry": "GB" }, "geo": { "@type": "GeoCoordinates", "latitude": {{
+find_us.training_lat }}, "longitude": {{ find_us.training_lng }} },
+"description": "{{ find_us.training_address | replace('"', '\\"') }}",
+"amenityFeature": [ { "@type": "LocationFeatureSpecification", "name": "Off-Site
+Parking", "value": true, "description": "{{ find_us.parking_note | replace('"',
+'\\"') }} Address: {{ find_us.parking_address | replace('"', '\\"') }}." } ] } }
+{% endblock %} {% block header_extra %} {% include "hero.jinja.html" %} {%
+endblock %} {% block content %} {% set find_us = page_content %}
+<section id="find-us-section">
+  <div class="find-us-wrap">
+    <h1>{{ find_us.title }}</h1>
+
+    <div class="find-us-grid">
+      <div class="find-us-details">
+        <h2>Training Location</h2>
+        <p>{{ find_us.training_note }}</p>
+        <p class="address-block">{{ find_us.training_address }}</p>
+
+        <h2>Parking</h2>
+        <p>{{ find_us.parking_note }}</p>
+        <p class="address-block">{{ find_us.parking_address }}</p>
+
+        <p class="find-us-contact">
+          <strong>Call Mike:</strong>
+          <a href="tel:{{ base_data.phone_normalised }}"
+            >{{ base_data.phone }}</a
+          >
+        </p>
+      </div>
+
+      <div id="find-us-map"></div>
+    </div>
+  </div>
+</section>
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  const trainingLocation = [{{ find_us.training_lat }}, {{ find_us.training_lng }}];
+  const parkingLocation = [{{ find_us.parking_lat }}, {{ find_us.parking_lng }}];
+
+  const map = L.map('find-us-map').setView(trainingLocation, 16);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  L.marker(trainingLocation)
+    .addTo(map)
+    .bindPopup('<strong>MB Motorcycle Training</strong><br>{{ find_us.training_address }}')
+    .openPopup();
+
+  L.marker(parkingLocation)
+    .addTo(map)
+    .bindPopup('<strong>Parking: Climax Cafe</strong><br>{{ find_us.parking_address }}');
+</script>
+{% endblock %}

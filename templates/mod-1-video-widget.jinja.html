@@ -1,0 +1,17 @@
+{% set video = page_content.mod1_video %}
+
+<div class="video-widget-box">
+  <div class="video-widget-header">
+    <h3>{{ video.title }}</h3>
+    <p>{{ video.blurb }}</p>
+  </div>
+
+  <div class="video-responsive-wrapper">
+    <video controls preload="metadata" poster="{{ video.poster }}" playsinline>
+      <source src="{{ video.filename }}" type="video/mp4" />
+      Your browser doesn't support HTML5 video streaming. You can
+      <a href="{{ video.filename }}">download the video file here</a>
+      instead.
+    </video>
+  </div>
+</div>

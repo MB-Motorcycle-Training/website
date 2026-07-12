@@ -1,0 +1,38 @@
+{% set testimonial = page_content.main_testimonial %}
+
+<div class="testimonial-callout-box">
+  <span class="badge-accent">{{ testimonial.title }}</span>
+  <p class="callout-snippet">{{ testimonial.callout }}</p>
+  <a
+    href="#full-police-testimonial"
+    id="read-more-testimonial-btn"
+    class="callout-scroll-link"
+  >
+  Read full letter from {{ testimonial.callout_attribution }}&rarr;
+  </a>
+</div>
+
+<section id="full-police-testimonial" class="full-testimonial-section">
+  <div class="testimonial-wrapper">
+    <div class="police-badge-icon" aria-hidden="true">🚔</div>
+    <blockquote id="police-letter" class="letter-clamped">
+      {% for paragraph in testimonial.letter_paragraphs %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+    </blockquote>
+    <cite>
+      <strong>{{ testimonial.letter_attribution.name }}</strong>
+      <span>{{ testimonial.letter_attribution.role }}</span>
+    </cite>
+
+    <button
+      type="button"
+      class="letter-toggle"
+      id="letter-toggle"
+      aria-expanded="false"
+      aria-controls="police-letter"
+    >
+      Read full letter &darr;
+    </button>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+{% set cta = page_content.cta %}
+
+<section class="cta-banner">
+  <div class="cta-text-content">
+    <h3>{{ cta.title }}</h3>
+    <p>{{ cta.blurb }}</p>
+  </div>
+
+  <div class="cta-button-wrap">
+    <a href="courses.html" class="embossed-btn">
+      <span class="btn-primary">{{ cta.big_bike }}</span>
+      <span class="btn-sub">{{ cta.button_text }}</span>
+    </a>
+  </div>
+</section>

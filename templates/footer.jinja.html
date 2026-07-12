@@ -1,0 +1,44 @@
+<footer id="page-footer">
+  <div class="footer-branding-zone">
+    <div class="footer-logos">
+      {% include "dvsa-approved.jinja.html" %}
+      <img
+        src="assets/development-training-logo.jpg"
+        alt="MB Motorcycle Training Development, Training, Back to Biking"
+        class="footer-brand-img"
+      />
+      <img
+        src="assets/dia-sml.jpg"
+        alt="Driving Instructors Association Approved"
+        class="footer-credential-img"
+      />
+    </div>
+  </div>
+  <div class="footer-container">
+    <div class="footer-address">
+      <address>
+        {% for line in base_data.address_parts %}{{ line }}{% if not loop.last
+        %}, <br />
+        {% endif %} {% endfor %}
+      </address>
+    </div>
+
+    <div class="footer-contact">
+      <p class="footer-phone">
+        <strong>Call:</strong>
+        <a href="tel:{{ base_data.phone_normalised }}">{{ base_data.phone }}</a>
+      </p>
+      <p class="footer-email">
+        <strong>Email:</strong>
+        <a href="mailto:{{ base_data.email }}">{{ base_data.email }}</a>
+      </p>
+    </div>
+  </div>
+  <div class="homage-badge">
+    <img
+      src="assets/footer-mini-icon.jpg"
+      alt="Original 2004 background graphic"
+      class="footer-mini-icon"
+    />
+  </div>
+</footer>

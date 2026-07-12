@@ -1,0 +1,37 @@
+{% set carousel = page_content.carousel.slides %}
+<div class="hero-carousel-wrapper" aria-roledescription="carousel" aria-label="Motorcycle Training Gallery">
+  <div class="carousel-viewport">
+    {% for slide in carousel %}
+    <div class="carousel-slide" id="hero-slide-{{ loop.index }}" role="group" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ loop.length }}">
+      <img src="{{ slide.image }}" alt="{{ slide.alt }}" loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
+      {% if slide.caption %}
+      <div class="carousel-caption-overlay">
+        <p>{{ slide.caption }}</p>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Micro-navigation targets for desktops -->
+  <button class="carousel-arrow prev" aria-label="Previous slide" type="button">‹</button>
+  <button class="carousel-arrow next" aria-label="Next slide" type="button">›</button>
+</div>
+
+<script>
+  // Self-contained logic isolated right to the component
+  (function() {
+    const viewport = document.querySelector('.carousel-viewport');
+    const prevBtn = document.querySelector('.carousel-arrow.prev');
+    const nextBtn = document.querySelector('.carousel-arrow.next');
+
+    if (viewport && prevBtn && nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        viewport.scrollBy({ left: viewport.clientWidth, behavior: 'smooth' });
+      });
+      prevBtn.addEventListener('click', () => {
+        viewport.scrollBy({ left: -viewport.clientWidth, behavior: 'smooth' });
+      });
+    }
+  })();
+</script>

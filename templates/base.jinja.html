@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Core Search & Controls -->
+    <title>{{ page_data.title }}</title>
+    <meta name="description" content="{{ page_data.description }}" />
+    <meta name="robots" content="{{ page_data.robots }}" />
+    <link
+      rel="canonical"
+      href="{{ site_settings.base_url }}/{{ page_data.slug }}"
+    />
+
+    <!-- OpenGraph (Facebook, LinkedIn, Slack, WhatsApp) -->
+    <meta property="og:site_name" content="{{ site_settings.site_name }}" />
+    <meta property="og:locale" content="{{ site_settings.locale }}" />
+    <meta
+      property="og:url"
+      content="{{ site_settings.base_url }}/{{ page_data.slug }}"
+    />
+    <meta property="og:title" content="{{ page_data.title }}" />
+    <meta property="og:description" content="{{ page_data.description }}" />
+    <meta property="og:type" content="{{ page_data.opengraph.type }}" />
+    <meta
+      property="og:image"
+      content="{{ site_settings.base_url }}/{{ page_data.opengraph.image }}"
+    />
+    <meta
+      property="og:image:alt"
+      content="{{ page_data.opengraph.image_alt }}"
+    />
+
+    <!-- X / Twitter Cards -->
+    <meta name="twitter:card" content="{{ page_data.twitter.card }}" />
+    <meta name="twitter:title" content="{{ page_data.title }}" />
+    <meta name="twitter:description" content="{{ page_data.description }}" />
+    <meta
+      name="twitter:image"
+      content="{{ site_settings.base_url }}/{{ page_data.opengraph.image }}"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="{{ page_data.opengraph.image_alt }}"
+    />
+
+    <!-- Assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script type="application/ld+json">
+      {# Allows dynamically generated schemas e.g. faq to go here #}
+      {% block schema_json %}
+        {% if page_data.schema_json %}
+          {{ page_data.schema_json | safe }}
+        {% endif %}
+      {% endblock %}
+    </script>
+
+    {% block extra_meta %}{% endblock %}
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div id="page-wrapper">
+      <header id="header">
+        {% include "header.jinja.html" %} {% block header_extra %} {% endblock
+        %} {% include "navbar.jinja.html" %}
+      </header>
+
+      <main id="content-wrapper">{% block content %} {% endblock %}</main>
+    </div>
+    {% include "footer.jinja.html" %} {% block body_scripts %} {% endblock %}
+  </body>
+</html>

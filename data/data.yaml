@@ -1,0 +1,304 @@
+# Global defaults used across the site unless overridden by a specific page
+site_settings:
+  site_name: "MB Motorcycle Training"
+  locale: "en_GB"
+
+base_data:
+  address_parts:
+    - "MB Motorcycle Training"
+    - "Beech Works"
+    - "Stubley Hollow"
+    - "Wreakes Lane"
+    - "Dronfield"
+    - "S18 1PN"
+  phone: "07768 340 340"
+  phone_normalised: "+447768340340"
+  email: "mike@mbmotorcycletraining.co.uk"
+      
+
+# Page-specific metadata architecture
+pages_meta:
+  index:
+    title: "Motorcycle Training Sheffield & South Yorkshire | MB Motorcycle Training"
+    description: "Professional DVSA approved motorcycle training across Sheffield and Derbyshire. From CBT to Direct Access."
+    opengraph:
+      type: "website"
+      image: "images/og-main-share.jpg"
+      image_alt: "MB Motorcycle Training fleet and branding"
+    twitter:
+      card: "summary_large_image"
+    schema_json: |
+     {
+        "@context": "https://schema.org",
+        "@type": "DrivingSchool",
+        "name": "MB Motorcycle Training",
+        "image": "https://www.mikesmotorcycletraining.co.uk/images/og-share-card.jpg",
+        "@id": "https://www.mbmotorcycletraining.co.uk/#drivingschool",
+        "url": "https://www.mbmotorcycletraining.co.uk",
+        "telephone": "+447768340340",
+        "priceRange": "££",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Beech Works, Stubley Hollow, Wreakes Lane",
+          "addressLocality": "Dronfield",
+          "postalCode": "S18 1PN",
+          "addressCountry": "GB"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.307384,
+          "longitude": -1.479749
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "16:30"
+          }
+        ]
+      }
+
+  courses:
+    title: "Motorcycle Licence Options & Courses | MB Training"
+    description: "Explore our available motorcycle training courses including CBT, A1, A2, and Direct Access big bike training."
+    opengraph:
+      type: "article"
+      image: "images/og-courses.jpg"
+      image_alt: "Rider training on a 600cc machine"
+    twitter:
+      card: "summary_large_image"
+
+  find_us:
+    title: "Find Our Training Centre in Dronfield | MB Motorcycle Training"
+    description: "Location, map, and directions to our motorcycle training ground at Beech Works, Dronfield."
+    opengraph:
+      type: "article"
+      image: "images/og-map.jpg"
+      image_alt: "Map location for MB Motorcycle Training"
+    twitter:
+      card: "summary_large_image"
+
+  faq:
+    title: "Frequently Asked Questions | MB Motorcycle Training"
+    description: "Got questions about passing your CBT, clothing requirements, or Direct Access restrictions? Find clear answers here."
+    slug: "faq.html"
+    robots: "index, follow"
+    opengraph:
+      type: "article"
+      image: "images/og-faq.jpg"
+      image_alt: "A close up of a motorcycle dashboard and keys"
+    twitter:
+      card: "summary_large_image"
+
+pages_content:
+  index:
+    carousel:
+      slides:
+        - image: "assets/carousel/rider-training.jpeg"
+          alt: "Rider training"
+          caption: "Rider Training"
+        - image: "assets/carousel/rider-training.jpeg"
+          alt: "Rider training"
+          caption: "This is where you'd put your other photos"
+        - image: "assets/carousel/rider-training.jpeg"
+          alt: "Rider training"
+          caption: "Etc"
+    about_services:
+      why_train_with_mike:
+        title: "Why Train With Mike?"
+        blurb: "Mike has over 40 years of training experience - but self-praise is no recommendation, see what our customers say!"
+        testimonials:
+          - quote: "The whole course was done on well-maintained Yamaha 600cc Fazers — one of the many things that set Mike apart from other schools I visited."
+            name: "Mark Grant"
+            context: "Direct Access"
+          - quote: "The training rides were extremely enjoyable, and your radio equipment is crystal clear."
+            name: "Mark Carter"
+            context: "Police Officer, Direct Access"
+          - quote: "You do a brilliant job keeping the bikes in good order for everyone to learn on, so you know you'll be safe riding them."
+            name: "Craig"
+            context: "Direct Access, 2013"
+        facts_list:
+          - "Helmet, gloves and jacket provided"
+          - "Instructor-to-rider radio communication throughout every lesson"
+          - "Well-maintained training fleet, kept safe and reliable"
+      services_overview:
+        title: "Our Training Programs"
+        blurb: "From complete beginners getting onto two wheels for the first time to experienced riders stepping up to high-capacity machinery, we've got you covered."
+        services:
+          - "CBT Training"
+          - "A1 & A2 Lightweight"
+          - "Direct Access (Category A)"
+          - "Back to Biking Refresher"
+    cta:
+      title: "New to motorcycles? Come try it and see if you like it!"
+      blurb: "Get a real feel for riding with our introductory session. No pressure, no commitment—just expert guidance on a proper machine."
+      big_bike: "Try A Big Bike For £50"
+      button_text: "Find out More"
+    main_testimonial:
+      title: "Featured Endorsement"
+      callout: "\"In my role as an emergency services worker... I found Mike's instruction to be at an advanced level.\""
+      callout_attribution: "Officer Carter"
+      letter_paragraphs:
+        - "From day one, I was extremely impressed with your professionalism, knowledge and kindness. You have a unique way of making people feel at ease and at home, which is not only down to your personality, but clearly from your many years of experience as a professional motorcycle instructor."
+        - "Although I have to work varied shifts, you always managed to arrange convenient times and dates for the training rides. This is undoubtedly down to your forward planning, organisation and personal sacrifice. I was particularly pleased, and surprised, that the whole of my course was done on your well maintained Yamaha 600cc Fazers."
+        - "The training rides with you were extremely enjoyable, each one I looked forward to immensely. You make the instruction easy to understand, and your radio equipment is crystal clear."
+        - "In my role as an emergency services worker, I am required to drive to a very high standard. I found your instruction and training to be that of an advanced level, with safety being your number one objective."
+        - "Both myself and my friend Mark Grant, who also did the course at the same time, were over the moon when we both passed our tests first time - me passing with no faults and Mark with just one minor fault. Not a bad result for two people who hadn't done a driving test for over 20 years! This was purely down to your training and preparation. I can honestly say I would not have passed my test without your tuition."
+        - "I would also like to thank you for the excellent Enhanced Rider Scheme that I did with you soon after passing my test. This gave me even more confidence and knowledge as a newly qualified rider, and made a real difference when I came to insure my new Honda 600 Hornet."
+        - "We both passed our Mod 1 tests with zero faults."
+        - "Mike, once again thank you so much for your excellent tuition — it has been an absolute pleasure meeting you and learning to ride with you. I look forward to recommending you to as many people as possible. I hope to stay in touch and call in for a coffee and a chat on a regular basis."
+      letter_attribution:
+          name: "Mark Carter"
+          role: "Police Officer • Direct Access Graduate"
+    reviews_section:
+      heading: "What Our Riders Say"
+      reviews:
+        - author: "Craig"
+          rating: 5
+          text: "Passed both Mod 1 & Mod 2 first try, Mod 2 with a clean sheet. The examiner even said Mike teaches you 110% of what you need. Very flexible and will bend over backwards to get you where you need to be."
+          
+        - author: "Jonny B."
+          rating: 5
+          text: "His knowledge is top-level and his advice has made me a confident rider in a short space of time. Passed my Mod 2 with zero minor faults — the perfect way to finish!"
+          
+        - author: "David B."
+          rating: 5
+          text: "First class instructor and the best in the business. Calm, patient and very attentive. His years of experience make a big difference and his calm approach rubs off on his students."
+
+  courses:
+    page_title: "Price List For Courses"
+    blurb: "Prices from 1st July 2026. Test fees subject to change by DVSA."
+    course_note: "Unfortunately, we do not offer training for A1 or AM licences."
+    course_list:
+      - title: "A Full Unrestricted Licence"
+        age_req: "Age 24 (or 21 if candidate has held a full A2 licence for 2 yrs)"
+        bike_spec: "Minimum 595cc Motorcycle with at least 40 kw (54 bhp)"
+        includes: "An Introductory Session (lasts 60-90 minutes), CBT, Module 1 training, one Module 1 test fee, and 7 sessions of Module 2 training (each session 2½ - 3 hours), and one Module 2 test fee."
+        price: "£1200"
+        extras: "Additional sessions (2.5–3 hrs): £150"
+      - title: "A2 Full Restricted Licence"
+        age_req: "Age 19-23"
+        bike_spec: "Minimum 395cc motorcycle at least 25kw/34 bhp. Not exceeding 35 kw (47 bhp)"
+        includes: "An Introductory Session (lasts 60 to 90 minutes), CBT, Module 1 training, and one Module 1 test and 7 sessions (each session 2½-3 hours), and one Module 2 test fee."
+        price: "£1200"
+        extras: "Additional sessions (2.5–3 hrs): £150"
+      - title: "Back to Biking Development Training"
+        age_req: "Full licence holders"
+        bike_spec: ""
+        includes: "2½-3 hours on a 1 to 1 basis."
+        price: "£150"
+        extras: ""
+      - title: "Pay as You Go - A / A2"
+        age_req: "Dependent on licence"
+        bike_spec: "Dependent on licence"
+        includes: "Pay as you go courses for A Full Unrestricted and A2 Full Restricted Licences"
+        price: "£150"
+        extras: "Pay as you go has limited availability - please enquire for details. Prices for 2½-3 hour lesson. CBT and Mod 1 training have a one-off fee of £250 each."
+
+    cancellation:
+      title: "Cancellation & Rearrangement"
+      notice_period: "48 Hours Strict Notice"
+      core_rule: "All fees paid are strictly non-refundable. You can re-arrange any lesson completely free of charge provided you give at least 48 hours' notice via phone, voicemail, or text."
+      penalty: "Cancellations or no-shows with less than 48 hours' notice are immediately forfeited. No exceptions will be made except for documented emergencies (e.g. medical hospitalisation or bereavement) where official evidence must be provided before a rewrite is considered."
+
+    terms_conditions:
+      title: "Terms & Conditions"
+      notes:
+        - "Test fees subject to change by DVSA."
+        - "Full Terms & Conditions are available to view at training premises."
+        - "Trainees are responsible for themselves to meet the legal requirements to ride the bike and are legally fit to ride - not under the influence of drugs or alcohol."
+        - "Fees paid are non-refundable. Lessons may be re-arranged free of charge with at least 48 hours' notice (phone, voicemail, or text)."
+        - "Appropriate clothing is required for motorcycle training. This means sturdy denim or motorcycle trousers with no rips or tears, and substantial footwear that fully covers the ankle, such as walking boots or similar sturdy boots. Steel toe-caps are not permitted, as they reduce feel through the footwear needed for gear changes."
+      summary: "Cancellations with less than 48 hours' notice will be treated as forfeited, except in cases of genuine emergency (e.g. bereavement, hospitalisation, serious illness or injury), where evidence may be requested (e.g. a hospital letter or similar documentation) before a re-arranged lesson or refund is considered at the instructor's discretion. All in-training packages must be completed within 12 months from the start date. Insurance cover for the motorbike training will be covered to third party and training bike, NOT to personal injury. Although professional instruction will be given to the trainee throughout, any decisions during the instruction made by the trainee are their responsibility. All monies paid or courses booked are non-transferable. Traffic violations are the responsibility of the trainee and not the Instructor."
+    mod1_video:
+      title: "Watch a Mod 1 Run-Through"
+      blurb: "Check out exactly what to expect on the DVSA training pad. Watch the lines, the speeds, and the layout before your big day."
+      filename: "assets/final_720_h265_fadeout.mp4"
+      poster: "assets/mod-1-thumbnail.png"
+
+  faq:
+    title: "Frequently Asked Questions"
+    intro: "Everything you need to know about licences, tests and training with Mike — all in one place."
+    categories:
+      - name: "Licence Types"
+        items:
+          - question: "What types of full motorcycle licence are there?"
+            answer: "There are four main categories. AM (minimum age 16) covers mopeds up to 35 km/h and requires CBT, theory and practical tests. A1 (minimum age 17) covers small motorcycles up to 125cc and 11kW. A2 (minimum age 19) covers medium motorcycles up to 35kW, available via Direct Access (CBT, theory and practical tests) or Progressive Access (2 years on an A1 motorcycle plus further tests). A (minimum age 24 via Direct Access, or 21 via Progressive Access) is unrestricted, allowing any size of motorcycle."
+          - question: "Does Mike offer training for all licence types?"
+            answer: "Mike doesn't cover every category, but this page gives you the key facts so you know what applies to you. Give Mike a call on 07768 340 340 to talk through which route fits your situation."
+
+      - name: "Compulsory Basic Training (CBT)"
+        items:
+          - question: "What is CBT and do I need it?"
+            answer: "CBT (Compulsory Basic Training) is the starting point for every learner rider and has been required since 1990. All learner motorcycle and moped riders must complete it before riding on the road, and it's also required for car licence holders wanting to use their moped entitlement. MB Motorcycle Training is approved by the DVSA as an Approved Training Body (ATB)."
+          - question: "What does the CBT course involve?"
+            answer: "CBT covers five elements taken in sequence: (A) an eyesight test and safety talk, (B) learning the bike's controls, (C) learning to ride the bike, (D) a theory talk, and (E) riding on the road. It can usually be completed in one day, subject to ability. Full details are on the gov.uk CBT page."
+          - question: "What happens after I complete CBT?"
+            answer: "Once you've completed all 5 elements you'll be issued a Certificate of Completion (DL196), which lets you ride on the road on a learner-legal motorcycle. You will need to complete a theory test, and once you've passed that, your practical test."
+          - question: "What safety equipment do I need for CBT?"
+            answer: "Mike can provide a helmet, motorcycle jacket and gloves if needed. The minimum requirement for bottoms is jeans — shell suit or tracksuit bottoms are not permitted. You will also need substantial footwear which covers your ankles — such as walking boots — without steel toecaps."
+
+      - name: "Theory Test"
+        items:
+          - question: "How do I book my motorcycle theory test?"
+            answer: "You can book directly on gov.uk."
+          - question: "Can I change or cancel my theory test?"
+            answer: "Yes — this can also be done directly through gov.uk."
+
+      - name: "Practical Test"
+        items:
+          - question: "Does Mike help with booking my practical test?"
+            answer: "Yes — Mike takes away the hassle of booking your own practical test and will book it for you. You'll need to have passed your theory test first."
+          - question: "Has anything changed about which bike I can use for my test?"
+            answer: "Yes — the rules for the types of moped or motorcycle you can use for your practical test changed on 19 January 2013. Full details are on gov.uk."
+
+      - name: "Access Routes (Restricted, Direct & Progressive)"
+        items:
+          - question: "What is Direct Access?"
+            answer: "Direct Access lets you train and test on a larger motorcycle at the appropriate minimum age, rather than progressing through smaller machines first. While practising for your test on a bike larger than a standard learner machine, you must be accompanied at all times by an approved Direct Access instructor on another bike, in radio contact, and wear fluorescent or reflective clothing, alongside your other provisional licence restrictions."
+          - question: "What is Progressive Access?"
+            answer: "Progressive Access lets you build up through licence categories over time — for example, 2 years of experience on an A1 motorcycle before taking further practical tests to move up to A2, and similarly from A2 to the full A licence."
+          - question: "What is Accelerated Access?"
+            answer: "If you pass your A2 licence at 23, you'd normally face a 2-year restriction to motorcycles not exceeding 35kW. Accelerated Access lets you instead take Direct Access on a big bike (minimum 595cc, 40kW/54bhp) once you turn 24."
+          - question: "What is Restricted Access?"
+            answer: "This refers to the licence categories (AM, A1, A2) that restrict you to a particular size or power of machine, as opposed to the full, unrestricted A licence."
+
+      - name: "Legal Requirements"
+        items:
+          - question: "Do I need insurance to ride?"
+            answer: "Yes — it's illegal to ride without insurance. Third party is the legal minimum and covers people and property you might injure or damage, but not you or your own bike. Third party, fire and theft adds cover for your bike being stolen or damaged by fire. Comprehensive is the most complete cover, including damage to your own machine and personal injury to yourself."
+          - question: "Does insurance cover carrying a passenger?"
+            answer: "Not automatically — pillion passenger cover is now optional on most policies, so check whether it's included if you plan to carry a passenger."
+          - question: "What affects the cost of my insurance?"
+            answer: "Cost varies by your age, the make of your motorcycle, its engine power and capacity, and where you live. Insurance groupings can differ between insurers, so it's worth shopping around."
+          - question: "Do I need an MOT?"
+            answer: "Yes, once your motorcycle is three years old or over. The MOT is required annually at an approved testing station to confirm your bike is roadworthy. If your bike fails, you can't ride it on the road except to get the fault fixed or to attend a retest."
+          - question: "Do I need to pay vehicle excise duty (road tax)?"
+            answer: "Yes, unless your motorcycle was registered before 1 January 1973, in which case it's exempt. The fee depends on engine size."
+          - question: "What are the rules on helmets?"
+            answer: "By law you must wear a safety helmet when riding on the road, and all helmets sold in the UK must comply with the ECE 22.05 motorcycle helmet safety standard."
+
+      - name: "Practical Stuff"
+        items:
+          - question: "Where can I park when I visit for training?"
+            answer: "You can park at the Climax Cafe, which is pretty much directly opposite."
+  find_us:
+    title: "Find Us"
+    training_note: "We are next to Screwfix."
+    training_address: "Adjacent to Beech Works, Stubley Hollow, Wreakes Ln, Dronfield S18 1PN."
+    training_lat: 53.307384
+    training_lng: -1.479749
+    parking_note: "You can park at the Climax Cafe, which is pretty much directly opposite."
+    parking_address: "2 Stubley Hollow, Dronfield S18 1PP"
+    parking_lat: 53.30815
+    parking_lng: -1.482126
+

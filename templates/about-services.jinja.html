@@ -1,0 +1,39 @@
+{% set why_mike = page_content.about_services.why_train_with_mike %}
+{% set services_block = page_content.about_services.services_overview %}
+<section id="about-services-overview">
+  <div class="overview-grid">
+    <div class="overview-column why-mike">
+      <h2>{{ why_mike.title }}</h2>
+      <p>{{ why_mike.blurb }}</p>
+      <div class="testimonial-cards">
+        {% for t in why_mike.testimonials %}
+        <blockquote class="testimonial-card">
+          <p class="testimonial-quote">&ldquo;{{ t.quote }}&rdquo;</p>
+          <footer class="testimonial-attribution">
+            <span class="testimonial-name">{{ t.name }}</span>{% if t.context %}<span class="testimonial-context">{{ t.context }}</span>{% endif %}
+          </footer>
+        </blockquote>
+        {% endfor %}
+      </div>
+      <ul class="facts-list">
+        {% for fact in why_mike.facts_list %}
+        <li>{{ fact }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="overview-column services-preview">
+      <h2>{{ services_block.title }}</h2>
+      <p>{{ services_block.blurb }}</p>
+      <div class="services-badges">
+        {% for service in  services_block.services %} 
+        <span class="service-tag">{{ service }}</span>
+        {% endfor %}
+      </div>
+      <div class="courses-cta-wrap">
+        <a href="courses.html" class="inline-courses-btn">
+          Explore Our Courses &amp; Requirements &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

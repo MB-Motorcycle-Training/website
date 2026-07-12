@@ -1,0 +1,56 @@
+{% set courses = page_content %}
+{% extends "base.jinja.html" %} 
+
+{% block schema_json %}
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "{{ courses.page_title }}",
+  "numberOfItems": {{ courses.course_list | length }},
+  "itemListElement": [
+    {% for course in courses.course_list %}
+    {
+      "@type": "ListItem",
+      "position": {{ loop.index }},
+      "item": {
+        "@type": "Service",
+        "name": "{{ course.title }}",
+        "description": "{{ course.includes | replace('"', '\\"') }}",
+        "provider": {
+          "@type": "DrivingSchool",
+          "name": "MB Motorcycle Training",
+          "@id": "https://www.mikesmotorcycletraining.co.uk/#drivingschool"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "{{ course.price | replace('£', '') }}",
+          "priceCurrency": "GBP",
+          "availability": "https://schema.org/InStoreOnly"
+        }
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+{% endblock %}
+
+{% block header_extra %} 
+  {% include "hero.jinja.html" %} 
+{% endblock %} 
+
+{% block content %}
+<section id="main-content">
+  <div class="courses-container">
+    
+    {% include "courses-header.jinja.html" %}
+    {% include "courses-grid.jinja.html" %}
+    {% include "mod-1-video-widget.jinja.html" %}
+    {% include "courses-tandcs.jinja.html" %}
+
+
+  </div>
+</section>
+{% endblock %} 
+
+{% block body_scripts %}
+{% endblock %}

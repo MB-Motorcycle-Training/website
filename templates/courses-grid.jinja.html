@@ -1,0 +1,21 @@
+{% set course_list = page_content.course_list %}
+
+<div class="courses-grid">
+  {% for course in course_list %}
+  <div class="course-card">
+    <h3 class="course-title">{{ course.title }}</h3>
+    <div class="course-price">{{ course.price }}</div>
+    <ul class="course-details">
+      {% if course.age_req %}
+      <li><strong>Age Requirement:</strong> {{ course.age_req }}</li>
+      {% endif %} {% if course.bike_spec %}
+      <li><strong>Bike Specification:</strong> {{ course.bike_spec }}</li>
+      {% endif %}
+      <li><strong>Includes:</strong> {{ course.includes }}</li>
+      {% if course.extras %}
+      <li><strong>Extras:</strong> {{ course.extras }}</li>
+      {% endif %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>
